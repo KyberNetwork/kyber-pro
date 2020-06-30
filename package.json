@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KyberNetwork/fpr-js-reference#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "kyber-fpr-sdk": "git+ssh://git@github.com/KyberNetwork/fpr-sdk.js.git#v2020"
   }
 }
