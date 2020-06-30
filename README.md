@@ -1,8 +1,12 @@
-# Kyber FPR Node Reference
+# Kyber FPR Node Implementation
 
 This is a reference implementation for Kyber's FPR javascript SDK. By default, it connects to Ropsten testnet, but you can easily point it to mainnet when you are ready to deploy. 
 
-For a detailed rundown through all the related concepts, refer to the Kyber FPR javascript tutorials. 
+We recommend reviewing the Kyber FPR tutorials to get a good understanding of the various functions involved.
+
+1. Basics: Deployment, Adding Token Pairs and Setting Base Rates
+2. Control  [WIP]
+3. Optimization and Sanity [WIP]
 
 ## Getting Started
 
