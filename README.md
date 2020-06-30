@@ -4,7 +4,7 @@ This is a reference implementation for Kyber's FPR javascript SDK. By default, i
 
 For a detailed rundown through all the related concepts, refer to the Kyber FPR javascript tutorials. 
 
-# Getting Started
+## Getting Started
 
 To get started, clone this repo into a local directory. After that, run `npm install` to install the SDK and related libraries.
 
