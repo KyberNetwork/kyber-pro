@@ -7,6 +7,7 @@ const web3 = new Web3(provider)
 const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_PRIVATE_KEY)
 const Breserve = new FPR.BaseContract(web3, addresses.reserve)
 web3.eth.accounts.wallet.add(account)
+//pass in the account you want to act as an operator
 Breserve.addOperator(account, '0x9e5f206aA7aAc88fe4d5Bc378d114FF8bD5A67c5')
 .then( result => { console.log(result)})
 
