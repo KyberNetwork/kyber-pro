@@ -9,7 +9,9 @@ const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_PRIVAT
 
 const deployer = new FPR.Deployer(web3)
 
+console.log ("Deploying smart contracts to Ropsten")
 deployer.web3.eth.accounts.wallet.add(account)
 deployer.deploy(account).then(addresses => {
+    console.log ("Smart contracts deployed!")
     console.log(addresses)    
 })
