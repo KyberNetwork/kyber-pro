@@ -28,5 +28,4 @@ After that, run the deployment script. This will set up the corresponding smart 
 node deploy.js
 ```
 
-This should replace the default reserve addresses in `addresses.json` with the ones you just set up. 
-
+Replace the default reserve addresses in `addresses.json` with the addresses that show up in the deployment script.
