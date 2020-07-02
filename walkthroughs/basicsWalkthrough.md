@@ -4,15 +4,12 @@ This walkthrough will help you create a sample working reserve bot that uses the
 
 Steps here includes:
 
-- [Walkthrough 1: Setting Up Kyber Fed Price Reserve On Testnet With A Token Pair](#walkthrough-1-setting-up-kyber-fed-price-reserve-on-testnet-with-a-token-pair)
-  - [Requirements](#requirements)
-  - [1. Deployment Of The Reserve To Testnet](#1-deployment-of-the-reserve-to-testnet)
-  - [2. Add a KyberTestToken/ETH Pair](#2-add-a-kybertesttokeneth-pair)
-  - [3. Setting Permissions Group](#3-setting-permissions-group)
-  - [4. Setting Base Rates And Step Functions For Token](#4-setting-base-rates-and-step-functions-for-token)
-  - [5. See Your Quote For This Pair On Testnet](#5-see-your-quote-for-this-pair-on-testnet)
-  - [6. Trade KTT for ETH](#6-trade-ktt-for-eth)
-  - [Next Steps](#next-steps)
+  1. [Deployment Of The Reserve To Testnet](#1-deployment-of-the-reserve-to-testnet)
+  2.  [Add a KyberTestToken/ETH Pair](#2-add-a-kybertesttokeneth-pair)
+  3.  [Setting Permissions Group](#3-setting-permissions-group)
+  4.  [Setting Base Rates And Step Functions For Token](#4-setting-base-rates-and-step-functions-for-token)
+  5.  [See Your Quote For This Pair On Testnet](#5-see-your-quote-for-this-pair-on-testnet)
+  6.  [Trade KTT for ETH](#6-trade-ktt-for-eth)
 
 The source code for this walkthrough is at [link](https://github.com/KyberNetwork/fpr-js-reference). 
 

@@ -1,11 +1,10 @@
 # Kyber FPR Node Implementation
 
-Kyber FPRs allows professional MMs to either manually or build bots to operate their own unique algorithms, customize their trading strategy, and adjust their desired risk exposure. 
+Kyber FPRs allows professional MMs to either manually or build bots to operate their own unique algorithms, customize their trading strategy, and adjust their desired risk exposure. This is a reference implementation for Kyber's FPR javascript SDK. 
 
-This is a reference implementation for Kyber's FPR javascript SDK. By default, it connects to Ropsten testnet, but you can easily point it to mainnet when you are ready to deploy. 
+We recommend reviewing the following basic walkthrough to get a good understanding of the key ideas. By default, it connects to Ropsten testnet, but you can easily point it to mainnet when you are ready to deploy. 
 
-We recommend reviewing the following walkthroughs to get a good understanding of the key ideas.
+[Walkthrough 1: Deployment, Adding Token Pairs and Setting Rates](walkthroughs/basicsWalkthrough.md)
 
-1. [Basics: Deployment, Adding Token Pairs and Setting Rates](walkthroughs/basicsWalkthrough.md)
-2. Control: Step functions and token parameters (WIP)
-3. Optimization: Sanity Rates And Transaction Replacement (WIP)
+More advanced walkthroughs, including how to use step functions to simulate orderbooks, sanity rates to improve fund safety, and advanced concepts like replacing transactions will be added shortly.
+
