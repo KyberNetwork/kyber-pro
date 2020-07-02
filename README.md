@@ -8,4 +8,4 @@ We recommend reviewing the following walkthroughs to get a good understanding of
 
 1. [Basics: Deployment, Adding Token Pairs and Setting Rates](walkthroughs/basicsWalkthrough.md)
 2. Control: Step functions and token parameters (WIP)
-3. Optimization: Sanity Rates And Transaction Replacement
+3. Optimization: Sanity Rates And Transaction Replacement (WIP)
