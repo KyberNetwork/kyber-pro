@@ -42,4 +42,9 @@ manageReserve.addToken(account, KTTokenAddress, tokenInfo)
          }).catch( error => { console.log(error)})
          }).catch(error => {console.log(error)})
       }) .catch(error => {console.log(error)})
+      //checking buy/Sell rates for the token
+   reserveManager.getBuyRates(KTTokenAddress,1).
+      then(Brates => {console.log("Buy Rates"+Brates)}) 
+   reserveManager.getSellRates(KTTokenAddress,1).
+       then(srates => {console.log("Sell Rates"+srates)})
    }).catch( error => { console.log(error)})
