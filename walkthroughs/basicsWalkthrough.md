@@ -1,9 +1,5 @@
 # Walkthrough 1: Setting Up Kyber Fed Price Reserve On Testnet With A Token Pair
 
-Kyber FPRs allows professional MMs to either manually or build bots to operate their own unique algorithms, customize their trading strategy, and adjust their desired risk exposure. 
-
-Operating FPRs does not require smart contract development expertise, but requires familiarity with JS as well as a working understanding of how smart contracts function. 
-
 This walkthrough will help you create a sample working reserve bot that uses the FPR javascript SDK to set up trading pairs on testnet. For the purpose of this walkthrough, we will be setting a KTT/ETH pair. The KTT token is a custom token deployed on testnet, for accessibility and convenience. 
 
 Steps here includes:
