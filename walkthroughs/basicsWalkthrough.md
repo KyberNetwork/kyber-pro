@@ -1,15 +1,15 @@
 # Walkthrough 1: Setting Up Kyber Fed Price Reserve On Testnet With A Token Pair
 
-This walkthrough will help you create a sample working reserve bot that uses the FPR javascript SDK to set up trading pairs on testnet. For the purpose of this walkthrough, we will be setting a KTT/ETH pair. The KTT token is a custom token deployed on testnet, for accessibility and convenience. 
+This walkthrough will help you use the [FPR SDK](https://github.com/KyberNetwork/fpr-sdk.js) create a working reserve with trading pairs on testnet. For the purpose of this walkthrough, we will be setting a KTT/ETH pair. The KTT token is a custom token deployed on testnet for accessibility and convenience. 
 
 Steps here includes:
 
   1. [Deployment Of The Reserve To Testnet](#1-deployment-of-the-reserve-to-testnet)
-  2.  [Add a KyberTestToken/ETH Pair](#2-add-a-kybertesttokeneth-pair)
-  3.  [Setting Permissions Group](#3-setting-permissions-group)
-  4.  [Setting Base Rates And Step Functions For Token](#4-setting-base-rates-and-step-functions-for-token)
-  5.  [See Your Quote For This Pair On Testnet](#5-see-your-quote-for-this-pair-on-testnet)
-  6.  [Trade KTT for ETH](#6-trade-ktt-for-eth)
+  2. [Add a KyberTestToken/ETH Pair](#2-add-a-kybertesttokeneth-pair)
+  3. [Setting Permissions Group](#3-setting-permissions-group)
+  4. [Setting Base Rates And Step Functions For Token](#4-setting-base-rates-and-step-functions-for-token)
+  5. [See Your Quote For This Pair On Testnet](#5-see-your-quote-for-this-pair-on-testnet)
+  6. [Trade KTT for ETH](#6-trade-ktt-for-eth)
 
 The source code for this walkthrough is at [link](https://github.com/KyberNetwork/fpr-js-reference). 
 
