@@ -27,8 +27,12 @@ Next, create and initialize a node directory and install Kyber FPR SDK.
 
 ```
 npm init
+<<<<<<< HEAD
 npm install --save https://github.com/KyberNetwork/fpr-sdk.js
 npm install web3
+=======
+npm install --save kyber-fpr-sdk
+>>>>>>> 2f280ae0acb703d39af4d94744880c8451ce73d2
 ```
 
 All through this walkthrough, use the same address and do not switch accounts. 
