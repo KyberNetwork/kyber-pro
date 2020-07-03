@@ -3,7 +3,7 @@ var FPR = require("kyber-fpr-sdk")
 var Web3 = require("web3")
 var fs = require("fs")
 //add credentials to your env variables
-const provider = new Web3.providers.HttpProvider(process.env.ROPSTEN_NODE_URL)
+const provider = new Web3.providers.HttpProvider(process.env.TESTNET_NODE_URL)
 const web3 = new Web3(provider)
 const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_ADMIN_PRIVATE_KEY)
 
