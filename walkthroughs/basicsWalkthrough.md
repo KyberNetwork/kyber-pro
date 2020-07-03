@@ -27,12 +27,8 @@ Next, create and initialize a node directory and install Kyber FPR SDK.
 
 ```
 npm init
-<<<<<<< HEAD
 npm install --save https://github.com/KyberNetwork/fpr-sdk.js
 npm install web3
-=======
-npm install --save kyber-fpr-sdk
->>>>>>> 2f280ae0acb703d39af4d94744880c8451ce73d2
 ```
 
 All through this walkthrough, use the same address and do not switch accounts. 
@@ -51,7 +47,7 @@ Note: **The account used to deploy the script in step 1, will hold the ADMIN rig
 const provider = new Web3.providers.HttpProvider(process.env.ROPSTEN_NODE_URL)
 
 const web3 = new Web3(provider)
-const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_PRIVATE_KEY)
+const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_ADMIN_PRIVATE_KEY)
 
 const deployer = new FPR.Deployer(web3)
 deployer.web3.eth.accounts.wallet.add(account)
@@ -97,7 +93,7 @@ It’s recommended to have only one admin address, operator and alerter can be m
 
 Set up a new account on metamask and add the private key to the environment variables:
 
-*   `TESTNET_OPERATOR_PRIVATE_KEY:"Private key of the operator account"`
+*   `TEST_OPERATOR_PRIVATE_KEY:"Private key of the operator account"`
 
 As this is on testnet, you may add the admin address as the operator account as well, **ideally you should be using a different hot wallet for this action in the mainnet**.  
 
