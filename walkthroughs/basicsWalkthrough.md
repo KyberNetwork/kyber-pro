@@ -48,14 +48,15 @@ const provider = new Web3.providers.HttpProvider(process.env.ROPSTEN_NODE_URL)
 
 const web3 = new Web3(provider)
 const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_ADMIN_PRIVATE_KEY)
-
+const KNAddress= '0x920B322D4B8BAB34fb6233646F5c87F87e79952b';
 const deployer = new FPR.Deployer(web3)
 deployer.web3.eth.accounts.wallet.add(account)
 
-deployer.deploy(account).then(addresses => {
+(async ()=>{
+    const addresses = await deployer.deploy(account, KNAddress);
    console.log(`Reserve Contract: ${addresses.reserveContract}`)
    console.log(`Conversion Contract + ${addresses.conversionRateContract}`)
-  })
+  })();
 ```
 
 ## 2. Add a KyberTestToken/ETH Pair 
@@ -75,8 +76,10 @@ Const KTTokenAddress = "0xc376079608C0F17FE06b9e950872666f9c3C3DA4"
 
 const tokenInfo = new conversionRates.TokenControlInfo(100000000000000,440000000000000000000n,920000000000000000000n)
 
-reserveManager.addToken(account.address, KTTTokenAddress, tokenControlInfo)
-  .then( result => {console.log(result)})
+(async () => {
+   console.log('Adding token')
+ await manageReserve.addToken(account, KTTokenAddress, tokenInfo)
+   })();
 ```
 
 
@@ -121,15 +124,13 @@ We will get the current block number and set initial rate, this would mean that 
 ```js
 // setRates.js
 
-web3.eth.getBlockNumber()
-    .then(blockNumber => {
-        return reserve.setRate(operatorAccount, [rate] , blockNumber)
-    })
- 	.then(result => {
-        console.log(result)
-    })
-```
-
+(async () => {
+   const blockNumber = await web3.eth.getBlockNumber();
+  
+   console.log("Setting base buy/sell rates")
+   await reserveManager.setRate(operator, [rate] , blockNumber);
+   console.log("done");
+})();
 
 
 ## 5. See Your Quote For This Pair On Testnet 
@@ -138,7 +139,7 @@ Once you have completed step 4, you could call getBuyRates() and getSellRates() 
 
 
 ```js
-// seeRates.js
+// checkRates.js
 
   reserveManager.getBuyRates(KTTokenAddress,1).
      then(Brates => {console.log("Buy Rates"+Brates)})
