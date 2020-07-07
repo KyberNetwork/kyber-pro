@@ -15,7 +15,7 @@ deployer.web3.eth.accounts.wallet.add(account);
 
 (async ()=>{
     const res = await deployer.deploy(account, KNAddress);
-    fs.writeFileSync("addresses.json",JSON.stringify(
+    fs.writeFileSync("./addresses.json",JSON.stringify(
         {reserve: res.reserve, conversionRates: 
             res.conversionRates, sanityRates:
              res.sanityRates}));
