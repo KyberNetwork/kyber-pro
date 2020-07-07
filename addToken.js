@@ -12,8 +12,8 @@ const web3 = new Web3(provider)
 const account = web3.eth.accounts.privateKeyToAccount(process.env.TESTNET_ADMIN_PRIVATE_KEY)
 web3.eth.accounts.wallet.add(account)
 
-const manageReserve = new FPR.Reserve(web3, addresses)
-manageReserve.addToken(account, KTTokenAddress, tokenInfo)
-   .then( (result) => {
-      console.log(result)
-   })
+const manageReserve = new FPR.Reserve(web3, addresses);
+(async () => {
+   console.log('Adding token')
+ await manageReserve.addToken(account, KTTokenAddress, tokenInfo)
+   })();
