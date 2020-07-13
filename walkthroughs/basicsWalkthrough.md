@@ -53,7 +53,7 @@ const deployer = new FPR.Deployer(web3)
 deployer.web3.eth.accounts.wallet.add(account)
 
 (async ()=>{
-    const addresses = await deployer.deploy(account, KNAddress);
+    const addresses = await deployer.deploy(account.address, KNAddress);
    console.log(`Reserve Contract: ${addresses.reserveContract}`)
    console.log(`Conversion Contract + ${addresses.conversionRateContract}`)
   })();
@@ -74,11 +74,11 @@ These default parameters determine the limits for per-block or between updates t
 const reserveManager = new FPR.Reserve(web3, addresses)
 Const KTTokenAddress = "0xc376079608C0F17FE06b9e950872666f9c3C3DA4"
 
-const tokenInfo = new conversionRates.TokenControlInfo(100000000000000,440000000000000000000n,920000000000000000000n)
+const tokenInfo = new FPR.TokenControlInfo(100000000000000,440000000000000000000n,920000000000000000000n)
 
 (async () => {
    console.log('Adding token')
- await manageReserve.addToken(account, KTTokenAddress, tokenInfo)
+ await manageReserve.addToken(account.address, KTTokenAddress, tokenInfo)
    })();
 ```
 
@@ -107,7 +107,7 @@ After that, give the operator permission for the conversionRates contract.
 
 const CRContract = new FPR.ConversionRatesContract(web3, addresses.conversionRates)
 
-CRContract.addOperator(account, account.address)
+CRContract.addOperator(account.address, account.address)
       .then( result => {
     console.log(result)
     })
@@ -128,7 +128,7 @@ We will get the current block number and set initial rate, this would mean that 
    const blockNumber = await web3.eth.getBlockNumber();
   
    console.log("Setting base buy/sell rates")
-   await reserveManager.setRate(operator, [rate] , blockNumber);
+   await reserveManager.setRate(operator.address, [rate] , blockNumber);
    console.log("done");
 })();
 
@@ -153,7 +153,7 @@ Once you have completed step 4, you could call getBuyRates() and getSellRates() 
 To test out a quote/Trade where you buy KTT, you will need to do the following….
 
 - Tell Kyber to enable the reserve and transfer KTT over to the test account
-- Deposit testETH into the reserve smart contract
+- Deposit testETH and tokens into the reserve smart contract
 - You should be able to see the quote and buy it on the Kyberswap testnet instance!
 
 

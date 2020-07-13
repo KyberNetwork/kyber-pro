@@ -10,5 +10,5 @@ const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR
 const CRContract = new FPR.ConversionRatesContract(web3, addresses.conversionRates)
 web3.eth.accounts.wallet.add(account)
 //setting operator
-CRContract.addOperator(account, operator.address)
+CRContract.addOperator(account.address, operator.address)
 .then( result => { console.log(result)})

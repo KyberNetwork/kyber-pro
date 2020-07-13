@@ -13,6 +13,6 @@ web3.eth.accounts.wallet.add(account);
 
 (async ()=>{
     console.log('Linking Contracts');
-    await reserveManager.setContracts(account, KNAddress, addresses.conversionRates);
+    await reserveManager.setContracts(account.address, KNAddress, addresses.conversionRates);
         console.log("Done!")     
      })();

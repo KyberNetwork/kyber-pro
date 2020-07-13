@@ -14,7 +14,7 @@ console.log ("Deploying smart contracts to Ropsten");
 deployer.web3.eth.accounts.wallet.add(account);
 
 (async ()=>{
-    const res = await deployer.deploy(account, KNAddress);
+    const res = await deployer.deploy(account.address, KNAddress);
     fs.writeFileSync("./addresses.json",JSON.stringify(
         {reserve: res.reserve, conversionRates: 
             res.conversionRates, sanityRates:
