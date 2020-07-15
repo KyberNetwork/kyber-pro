@@ -153,8 +153,8 @@ Once you have completed step 4, you could call getBuyRates() and getSellRates() 
 To test out a quote/Trade where you buy KTT, you will need to do the following….
 
 - Tell Kyber to enable the reserve and transfer KTT over to the test account
-- Deposit testETH and tokens into the reserve smart contract
-- You should be able to see the quote and buy it on the Kyberswap testnet instance!
+- Deposit testETH and tokens into the reserve smart contract - equivalent amounts should work fine.
+- You should be able to see the quote and buy/sell it on the Kyberswap testnet instance!
 
 
 ## Next Steps
