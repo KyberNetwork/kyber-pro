@@ -13,9 +13,11 @@ const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
  
 function toStepFuncData(steps) {
-   const buy = steps.buy.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
-   const sell = steps.sell.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
-   return {buy:buy, sell:sell};
+  //convert each steps.buy element into StepFunctionDataPoint
+  const buy = steps.buy.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
+  // convert each steps.sell element into StepFunctionDataPoint
+  const sell = steps.sell.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
+  return {buy:buy, sell:sell};
 };
 steps = {
    "buy":[
