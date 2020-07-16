@@ -156,6 +156,8 @@ To test out a quote/Trade where you buy KTT, you will need to do the followingâ€
 - Deposit testETH and tokens into the reserve smart contract - equivalent amounts should work fine.
 - You should be able to see the quote and buy/sell it on the Kyberswap testnet instance!
 
+**To Test Trades:**
+ Go to ropsten.kyber.network , link your metamask account to the website by clicking on the metamask options. You can swap KTT with various other tokens available on ropsten kyberswap, Transfer tokens to any other wallet as well.
 
 ## Next Steps
 
