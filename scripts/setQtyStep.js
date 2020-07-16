@@ -1,7 +1,8 @@
 require('dotenv').config();
 var FPR = require("kyber-fpr-sdk");
 var Web3 = require("web3");
-var data = require("./stepFuncdata.json");
+const utils = require("./utils.js");
+var convertToTWei = utils.convertToTwei;
 var addresses = require("./addresses.json");
 const KTTokenAddress = "0xc376079608C0F17FE06b9e950872666f9c3C3DA4";
  
@@ -11,14 +12,27 @@ const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR
 const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
  
-const buy = data.buy.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
-const sell = data.sell.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
+function toStepFuncData(steps) {
+   const buy = steps.buy.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
+   const sell = steps.sell.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
+   return {buy:buy, sell:sell};
+};
+steps = {
+   "buy":[
+       {"x": convertToTWei(100), "y": 0},
+       {"x": convertToTWei(200), "y": -30}
+   ],
+   "sell":[
+      {"x": convertToTWei(100), "y": 0},
+      {"x": convertToTWei(200), "y": -30}
+   ]
+};
+var stepsData = toStepFuncData(steps);
  
 (async () => {
    
    //setQtyStepFunction is a only operator function 
    console.log("setting quantity step func's");
-   await reserveManager.setQtyStepFunction(operator.address, KTTokenAddress, buy, sell);
+   await reserveManager.setQtyStepFunction(operator.address, KTTokenAddress, stepsData.buy, stepsData.sell);
    console.log("done");
 })();
- 
