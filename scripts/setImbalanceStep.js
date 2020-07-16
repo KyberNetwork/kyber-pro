@@ -23,12 +23,12 @@ function toStepFuncData(steps) {
 };
 steps = {
    "buy":[
-       {"x": convertToTWei(100), "y": 0},
-       {"x": convertToTWei(200), "y": -30}
+       {"x": convertToTWei(10), "y": 0},
+       {"x": convertToTWei(100), "y": -30}
    ],
    "sell":[
       {"x": convertToTWei(0), "y": 0},
-      {"x": convertToTWei(-100), "y": -30}
+      {"x": convertToTWei(-10), "y": -30}
    ]
 };
 var stepsData = toStepFuncData(steps);
