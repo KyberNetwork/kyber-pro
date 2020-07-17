@@ -10,8 +10,9 @@ A user that buys/sells a big number of tokens will have a different impact on th
 The purpose of steps, therefore, is to have the contract automatically alter the price depending on the buy / sell quantities(QtyStepfunction) of a user, and the net traded amount between price update operations(ImbalanceStepFunction). 
 
 For the purpose of this walkthrough, we will assume that the price of the KTT token is equivalent to 0.0042ETH or 1 USD i.e., 1 ETH = 240KTT. 
+
 ***Getting Started***
-##Requirements For Walkthrough 
+## Requirements For Walkthrough 
 * should have completed the walkthrough 1 (link) 
 * Have contracts deployed.
 
@@ -19,10 +20,10 @@ If you have not completed the first walkthrough, and tested trading the KTT toke
 
 Topics included: 
 
-1. [Setting Quantity Step Function](#1-Quantity-Step-Functions:-Orderbook-Simulation)
-2. [Setting an Imbalance Step Function](#2-Imbalance-Functions:)
+1. [Setting Quantity Step Function](#1-Quantity-Step-Functions-Orderbook-Simulation)
+2. [Setting an Imbalance Step Function](#2-Imbalance-Functions)
 3. [Changing the default token parameters](#3-Changing-the-default-token-parameters)
-4. [Testing](#4-Test-Mode)
+4. [Testing](#4-Testing-Your-Rates)
 
 # 1. Quantity Step Functions: Orderbook Simulation 
 QtyStepFunction basically allows you to set buy and sell rates for different quantities. Buy and sell steps are used to change ASK & BID prices respectively.
@@ -62,6 +63,7 @@ var stepsData = stepFuncData(steps);
   console.log("done");
 })();
 ```
+
 ## 2. Imbalance Functions: 
 Imbalance step function allows different conversion rates based on the net traded token amount between price update operations.
 The motivation for imbalance step functions is to prevent imbalances in your inventory, in between price updates.
