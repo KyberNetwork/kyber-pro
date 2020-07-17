@@ -93,6 +93,7 @@ It’s recommended to have only one admin address, operator and alerter can be m
 
 *   **Admin Account**: The admin account is unique and handles infrequent, manual operations like listing new tokens in the exchange, adding or removing operator/s and alerter/s. All sensitive operations (e.g. fund related) are limited to the admin address. 
 *   **Operator Account:** Mostly a hot wallet and is used for frequent updates like setting reserve rates, monitoring and controlling prices. And a few other operations approved by the admin
+*   **Alerter Account:** Only an alerter can disbale trade of the reserve.
 
 Set up a new account on metamask and add the private key to the environment variables:
 

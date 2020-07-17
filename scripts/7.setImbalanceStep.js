@@ -28,7 +28,7 @@ var imbalanceData = stepFuncData(imbalance);
  
 (async () => {
    
-   //setQtyStepFunction is a only operator function 
+   //setImbalanceStepFunction is a only operator function 
    console.log("setting imbalance step func's");
    await reserveManager.setImbalanceStepFunction(operator.address, KTTokenAddress, imbalanceData.buy, imbalanceData.sell);
    console.log("done");
