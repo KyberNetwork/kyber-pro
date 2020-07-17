@@ -7,7 +7,7 @@ Topics included:
 1. [Setting Quantity Step Function](#1-Setting-Qty-Step-Function:-:Orderbook-Simulation)
 2. [Setting an Imbalance Step Function:](#2-Setting-an-Imbalance-Step-Function:)
 3. [Changing the default token parameters](#3-Changing-the-default-token-parameters)
-4.[Testing](#4-Test-Mode)
+4. [Testing](#4-Test-Mode)
 
 The reserve deployed in the first walkthrough is already listed to the network,so going forward it wouldn’t need any action from us, you can happily test how the pricing moves. Unless you want to add multiple tokens, we need to enable the token as well.
 
@@ -33,7 +33,7 @@ X is the quantity of token in wei, and y is the impact on conversion rate in bas
 
 Instead of negative steps, meaning worse rates, setting positive step values will give user better rates and could be considered as an advanced method to encourage users to "re-balance" the inventory
 
-Scenario for sell:** If you user wants to sell 100 KTT tokens , the conversion will be the base rate i.e., 0.0042ETH/KTT. When the user wants to sell more than 200 tokens , the conversion rate will be lower by 0.3% , i.e, rate will be 0.004187 ETH/KTT
+*Scenario for sell:* If you user wants to sell 100 KTT tokens , the conversion will be the base rate i.e., 0.0042ETH/KTT. When the user wants to sell more than 200 tokens , the conversion rate will be lower by 0.3% , i.e, rate will be 0.004187 ETH/KTT
 ```js
 // full code in fpr-sdk-reference/scipts/setQtyStep.js
 
@@ -45,7 +45,7 @@ Scenario for sell:** If you user wants to sell 100 KTT tokens , the conversion w
   console.log("done");
 })();
 ```
-**These scenarios are just as an illustration as to how you can manage different  rates, you can decide on the suitable numbers.**
+**These scenarios, prices are just as an illustration and assumptions as to how you can manage different  rates, you can decide on the suitable numbers.**
 
 ## 2) Setting an Imbalance Step Function: 
 
@@ -119,6 +119,6 @@ Conversion rates to buy KTT
 
 ## Next Steps
 
-That’s it for the walkthrough! In the coming walkthroughs, we will demonstrate advanced functions related to handling multiple tokens and optimizing your on-chain market making. 
+That’s it for this walkthrough! We will come up with one more walthrough soon, in it we will demonstrate advanced functions related to handling multiple tokens and optimizing your on-chain market making. 
 
 Links will appear here when ready! 
