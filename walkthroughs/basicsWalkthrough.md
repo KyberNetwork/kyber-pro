@@ -131,7 +131,7 @@ We will get the current block number and set initial rate, this would mean that 
    await reserveManager.setRate(operator.address, [rate] , blockNumber);
    console.log("done");
 })();
-
+```
 
 ## 5. See Your Quote For This Pair On Testnet 
 
@@ -157,7 +157,7 @@ To test out a quote/Trade where you buy KTT, you will need to do the followingâ€
 - You should be able to see the quote and buy/sell it on the Kyberswap testnet instance!
 
 **To Test Trades:**
- Go to ropsten.kyber.network , link your metamask account to the website by clicking on the metamask options. You can swap KTT with various other tokens available on ropsten kyberswap, Transfer tokens to any other wallet as well.
+ Go to [kyberSwap](https://ropsten.kyber.network/swap/eth-knc) , link your metamask account to the website by clicking on the metamask options. You can swap KTT with various other tokens available on ropsten kyberswap, Transfer tokens to any other wallet as well.
 
 ## Next Steps
 
