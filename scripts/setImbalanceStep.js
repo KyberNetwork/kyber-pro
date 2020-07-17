@@ -13,7 +13,7 @@ const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR
 const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
  
-
+//convertToTWei - converts to equivalent token wei amount 
 steps = {
    "buy":[
        {"x": convertToTWei(10), "y": 0},

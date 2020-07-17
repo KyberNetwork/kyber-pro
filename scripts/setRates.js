@@ -9,10 +9,12 @@ const provider = new Web3.providers.HttpProvider(process.env.TESTNET_NODE_URL);
 const web3 = new Web3(provider);
 const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR_PRIVATE_KEY);
 const reserveManager = new FPR.Reserve(web3, addresses);
-
 web3.eth.accounts.wallet.add(operator);
+
+//RateSetting(tokenAddress, buy Rate, sell Rate)
 const rate =  new FPR.RateSetting (KTTokenAddress, 4500000000000000,4700000000000000);
 (async () => {
+   //rate updates apply from current block
    const blockNumber = await web3.eth.getBlockNumber();
    //setRate is a only operator function 
    console.log("Setting base buy/sell rates")

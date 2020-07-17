@@ -12,7 +12,7 @@ const web3 = new Web3(provider);
 const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR_PRIVATE_KEY);
 const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
- 
+ //convertToTWei - converts to equivalent token wei amount 
 imbalance = {
    "buy":[
        {"x": convertToTWei(100), "y": 0},

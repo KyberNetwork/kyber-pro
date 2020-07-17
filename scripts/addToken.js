@@ -2,7 +2,11 @@ require('dotenv').config();
 var FPR = require("kyber-fpr-sdk");
 var Web3 = require("web3");
 var addresses = require("./addresses.json");
-const tokenInfo = new FPR.TokenControlInfo(100000000000000,440000000000000000000n,920000000000000000000n)
+//convertToTWei - converts to equivalent token wei amount 
+const tokenInfo = new FPR.TokenControlInfo(
+                           convertToTwei(0.001),
+                           convertToTwei(440),
+                           convertToTwei(920));
 const KTTokenAddress = "0xc376079608C0F17FE06b9e950872666f9c3C3DA4";
 
 const provider = new Web3.providers.HttpProvider(process.env.TESTNET_NODE_URL)
