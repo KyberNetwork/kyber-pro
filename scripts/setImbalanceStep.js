@@ -14,7 +14,7 @@ const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
  
 //convertToTWei - converts to equivalent token wei amount 
-steps = {
+imbalance = {
    "buy":[
        {"x": convertToTWei(10), "y": 0},
        {"x": convertToTWei(100), "y": -30}
@@ -24,13 +24,13 @@ steps = {
       {"x": convertToTWei(-10), "y": -30}
    ]
 };
-var stepsData = stepFuncData(steps);
+var imbalanceData = stepFuncData(imbalance);
  
 (async () => {
    
    //setQtyStepFunction is a only operator function 
    console.log("setting imbalance step func's");
-   await reserveManager.setImbalanceStepFunction(operator.address, KTTokenAddress, stepsData.buy, stepsData.sell);
+   await reserveManager.setImbalanceStepFunction(operator.address, KTTokenAddress, imbalanceData.buy, imbalanceData.sell);
    console.log("done");
 })();
  
