@@ -3,6 +3,7 @@ var FPR = require("kyber-fpr-sdk");
 var Web3 = require("web3");
 const utils = require("./utils.js");
 var convertToTWei = utils.convertToTwei;
+var stepFuncData = utils.stepFuncData;
 var addresses = require("./addresses.json");
 const KTTokenAddress = "0xc376079608C0F17FE06b9e950872666f9c3C3DA4";
  
@@ -12,14 +13,7 @@ const operator = web3.eth.accounts.privateKeyToAccount(process.env.TEST_OPERATOR
 const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
  
-function toStepFuncData(steps) {
-  //convert each steps.buy element into StepFunctionDataPoint
-  const buy = steps.buy.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
-  // convert each steps.sell element into StepFunctionDataPoint
-  const sell = steps.sell.map(e=>new FPR.StepFunctionDataPoint(e.x,e.y));
-  return {buy:buy, sell:sell};
-};
-steps = {
+imbalance = {
    "buy":[
        {"x": convertToTWei(100), "y": 0},
        {"x": convertToTWei(200), "y": -30}
@@ -29,7 +23,7 @@ steps = {
       {"x": convertToTWei(200), "y": -30}
    ]
 };
-var stepsData = toStepFuncData(steps);
+var stepsData = stepFuncData(imbalance);
  
 (async () => {
    
