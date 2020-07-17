@@ -25,6 +25,8 @@ Topics included:
 3. [Changing the default token parameters](#3-Changing-the-default-token-parameters)
 4. [Testing](#4-Testing-Your-Rates)
 
+The source code for this walkthrough is at [link](https://github.com/KyberNetwork/fpr-js-reference/scripts). 
+
 # 1. Quantity Step Functions: Orderbook Simulation 
 QtyStepFunction basically allows you to set buy and sell rates for different quantities. Buy and sell steps are used to change ASK & BID prices respectively.
 
