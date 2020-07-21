@@ -6,8 +6,6 @@ In addition to the initial rates, Kyber FPR provides powerful and efficient meth
 
 In this walkthrough, we will help you understand how to mirror the orderbook style of pricing using the FPR by using the QtyStepFunction. Also, we will assume that the initial base rate of the KTT token is equivalent to 0.0042ETH or 1 USD i.e., 1 ETH = 240KTT. 
 
-We will cover the other topics in future walkthroughs.
-
 ### Before You Begin
 
 1. Should have completed the [walkthrough 1](https://github.com/KyberNetwork/fpr-js-reference/blob/master/walkthroughs/basicsWalkthrough.md)
