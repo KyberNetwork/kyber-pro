@@ -70,8 +70,8 @@ Once we set `QtyStepFunction`, when querying for rates via smart contracts or th
 We encourage you to buy and sell in different quantities to understand the impact of trades on your inventory and conversion rates returned.
 
 Sample snapshots of how rates vary with different buy/sell rates are illustrated here:
-![Buy illustration](/snapshots/buy.png)
-![Sell Illustration](/snapshots/sell.png)
+![Buy illustration](/snapShots/buy.png)
+![Sell Illustration](/snapShots/sell.png)
 
 ## 3. Changing the default token parameters 
 
