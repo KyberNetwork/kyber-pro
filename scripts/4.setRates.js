@@ -17,7 +17,7 @@ const rate =  new FPR.RateSetting (KTTokenAddress, 4500000000000000,470000000000
    //rate updates apply from current block
    const blockNumber = await web3.eth.getBlockNumber();
    //setRate is a only operator function 
-   console.log("Setting base buy/sell rates")
+   console.log("Setting base buy/sell rates");
    await reserveManager.setRate(operator.address, [rate] , blockNumber);
   
    //intitializing these to 0 just for getting rates - only meant for tutorial-1
