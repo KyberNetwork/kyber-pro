@@ -41,13 +41,13 @@ Here, we set additional managing roles for the reserve and conversion rates cont
 
 In summary, every contract in the Kyber protocol has three permission groups:
 
-`Admin`
+`Admin`:
 The admin account is unique (usually a cold wallet) and handles infrequent, manual operations as well as adding new operators and alerters to the contract. All sensitive operations (e.g. fund related) are limited to the admin address.
 
-`Operators`
+`Operators`:
 The operator account is a hot wallet and is used for frequent updates like setting reserve rates and withdrawing funds from the reserve to addresses that have been whitelisted by the admin address.
 
-`Alerters`
+`Alerters`: 
 The alerter account is also a hot wallet and is used to halt trading due to inconsistencies in the system (e.g., strange conversion rates). In such cases, the reserve operation is suspended and can be resumed only by the admin address.
 
 **Admin**
