@@ -6,6 +6,7 @@ We recommend reviewing the following basic walkthrough to get a good understandi
 
 - [Walkthrough 1: Deployment, Adding Token Pairs and Setting Rates](docs/walkthrough1.md)
 - [Walkthrough 2: Controlling Rates](docs/walkthrough2.md)
+- [Mainnet Staging Guide](docs/mainnetStaging.md)
 
 More advanced walkthroughs, including how to use step functions to simulate orderbooks, sanity rates to improve fund safety, and advanced concepts like replacing transactions will be added shortly.
 

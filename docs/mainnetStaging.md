@@ -132,3 +132,7 @@ Once you have deployed contracts on mainnet, completed all the steps, let the Ky
 3. Any particular reserve address
 4. And a rebate wallet
 
+## Appendix
+
+* Set of responsibilities each of the permission group holds
+![Permission Groups](/snapShots/perm.png)
