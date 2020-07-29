@@ -11,28 +11,28 @@ Having said that, we haven’t covered the techniques for optimization and effic
 
 We have briefed the process on how to set up and manage a running reserve on ROPSTEN testnet in walkthrough [1](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough1.md) and [2](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough2.md), outlined here is the gist
 
-* Step 1 : Deploy contracts 
+* **Step 1 : Deploy contracts** 
 
 Deploy Reserve and Conversion rates contracts. If you are using Infura node, ensure to change the Node URLto mainnet and kyberNetworkAddress to the staging smart contract. 
 
 `Address : “0x9CB7bB6D4795A281860b9Bfb7B1441361Cc9A794”. `
 
 
-* Step 2: Set permission group
+* **Step 2: Set permission group**
 
 In walkthrough 1 and 2 we have set operators to the conversion rates contract, additional details and permission settings are discussed [below](#Permission-groups) in this document
 
-* Step 3: Add token/s
-
+* **Step 3: Add token/s**
 
 You can invoke the addToken function and pass in tokenControlInfo. Optimization to modify and manage multiple token will be discussed in the coming walkthrough
 
-* Step 4: Set base rate and qtyStep data for token
+* **Step 4: Set base rate and qtyStep data for token**
 
 Set buy/sell rate by invoking setRate() and quantity step for the token using setQtyStepFunction() , we’d recommend you to just initialize the imbalance step function to 0
 
 
-* Step: 5: Get the reserve listed
+* **Step: 5: Get the reserve listed**
+
 Deposit inventory, test withdrawals and let kyber team know if you have preference for reserveID.([Details below](#Reserve-ID-and-rebate-wallet))
 Although your funds reside on a smart contract, you always have access to your funds and can withdraw them at any point in time.
 
