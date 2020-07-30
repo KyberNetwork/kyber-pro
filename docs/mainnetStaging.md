@@ -13,11 +13,16 @@ We have briefed the process on how to set up and manage a running reserve on ROP
 
 * **Step 1 : Deploy contracts** 
 
-Deploy Reserve and Conversion rates contracts. If you are using Infura node, ensure to change the Node URLto mainnet and kyberNetworkAddress to the staging smart contract. 
+Deploy Reserve and Conversion rates contracts using the KYBER-FPR-SDK. If you are using Infura node, ensure to change the Node URLto mainnet and kyberNetworkAddress to the staging smart contract. 
 
-`Address : “0x9CB7bB6D4795A281860b9Bfb7B1441361Cc9A794”. `
-
-
+```js
+//KNAddress : “0x9CB7bB6D4795A281860b9Bfb7B1441361Cc9A794”. 
+const provider = new Web3.providers.HttpProvider(process.env.MAINNET_NODE_URL)
+const KNAddress= '“0x9CB7bB6D4795A281860b9Bfb7B1441361Cc9A794”';
+(async ()=>{
+    const addresses = await deployer.deploy(account.address, KNAddress);
+  })();
+```
 * **Step 2: Set permission group**
 
 In walkthrough 1 and 2 we have set operators to the conversion rates contract, additional details and permission settings are discussed [below](#Permission-groups) in this document
@@ -26,15 +31,16 @@ In walkthrough 1 and 2 we have set operators to the conversion rates contract, a
 
 You can invoke the addToken function and pass in tokenControlInfo. Optimization to modify and manage multiple token will be discussed in the coming walkthrough
 
-* **Step 4: Set base rate and qtyStep data for token**
+* **Step: 4: Get the reserve listed**
 
-Set buy/sell rate by invoking setRate() and quantity step for the token using setQtyStepFunction() , we’d recommend you to just initialize the imbalance step function to 0
+Deposit inventory, test withdrawals and **contact kyber team** to get reserve listed on the network also let the team know if you have preference for reserveID.([Details below](#Reserve-ID-and-rebate-wallet)).
 
+*Although your funds reside on a smart contract, you always have access to your funds and can withdraw them at any point in time.*
 
-* **Step: 5: Get the reserve listed**
+* **Step 5: Testing Phase**
 
-Deposit inventory, test withdrawals and let kyber team know if you have preference for reserveID.([Details below](#Reserve-ID-and-rebate-wallet))
-Although your funds reside on a smart contract, you always have access to your funds and can withdraw them at any point in time.
+After this step, our team will perform test on the reserve. To do so, enable trade on reserve, set buy/sell rate by invoking setRate() and quantity step for the token using setQtyStepFunction() , we’d recommend you to just initialize the imbalance step function to 0
+
 
 ## Permission groups: 
 Here, we set additional managing roles for the reserve and conversion rates contracts. As discussed earlier, each role has specific rights and responsibilities in each contract. Please make sure you have assigned these roles to rightful addresses.
@@ -42,10 +48,10 @@ Here, we set additional managing roles for the reserve and conversion rates cont
 In summary, every contract in the Kyber protocol has three permission groups:
 
 `Admin`:
-The admin account is unique (usually a cold wallet) and handles infrequent, manual operations as well as adding new operators and alerters to the contract. All sensitive operations (e.g. fund related) are limited to the admin address.
+The admin account is the most important we'd recommend you to have a cold wallet, or a multisig address for this action. All sensitive operations (e.g. fund related) are limited to the admin address.
 
 `Operators`:
-The operator account is a hot wallet and is used for frequent updates like setting reserve rates and withdrawing funds from the reserve to addresses that have been whitelisted by the admin address.
+The operator account, (preferably a hot wallet) is used for frequent updates. you could have the operator account set to the bot which can update reserve rates and withdrawing funds from the reserve, inorder to rebalance the inventory (only to addresses that have been whitelisted by the admin address)
 
 `Alerters`: 
 The alerter account is also a hot wallet and is used to halt trading due to inconsistencies in the system (e.g., strange conversion rates). In such cases, the reserve operation is suspended and can be resumed only by the admin address.
