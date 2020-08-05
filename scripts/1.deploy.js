@@ -19,5 +19,6 @@ deployer.web3.eth.accounts.wallet.add(account);
         {reserve: res.reserve, conversionRates: 
             res.conversionRates, sanityRates:
              res.sanityRates}));
+        console.log(res); 
         console.log("Done!"); 
      })();
