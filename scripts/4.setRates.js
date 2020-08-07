@@ -12,7 +12,7 @@ const reserveManager = new FPR.Reserve(web3, addresses);
 web3.eth.accounts.wallet.add(operator);
 
 //RateSetting(tokenAddress, buy Rate, sell Rate)
-const rate =  new FPR.RateSetting (KTTokenAddress, 4500000000000000,4700000000000000);
+const rate =  new FPR.RateSetting (KTTokenAddress, 240000000000000000000,4200000000000000);
 (async () => {
    //rate updates apply from current block
    const blockNumber = await web3.eth.getBlockNumber();
