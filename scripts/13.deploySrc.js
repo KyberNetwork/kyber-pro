@@ -21,10 +21,9 @@ const reserveManager = new FPR.Reserve(web3, addresses);
 //deploy sanityrates and set contracts of the reserve.
 (async ()=>{
     const res = await deployer.deploySanityRates(account.address);
-    var data = JSON.parse(addresses);
-    data.push(res)
-    addresses = JSON.stringify(data);
-    console.log(res); 
+    addresses.sanityRates = res;
+    console.log(addresses);
+    fs.writeFileSync("addresses.json", JSON.stringify(add)); 
     console.log('Linking Contracts');
     await reserveManager.setContracts(account.address, KNAddress, addresses.conversionRates,addresses.sanityRates);
     console.log("Done!"); 
