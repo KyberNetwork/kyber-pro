@@ -10,11 +10,11 @@ To proceed further on this doc, please make sure you have completed walkthrough 
 
 Complete basic testing on ropsten testnet. - covered in walkthrough [1](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough1.md) and [2](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough2.md)
 On [staging](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/mainnetStaging.md) environment 
-	* Deploy contracts
-	* Set permission group
-	* Add token
-	* set base rate and qtyStepfunction
-	* Get the reserve listed
+* Deploy contracts
+* Set permission group
+* Add token
+* set base rate and qtyStepfunction
+* Get the reserve listed
 
 
 
@@ -40,7 +40,7 @@ const tokenInfo = new FPR.TokenControlInfo(
  await manageReserve.addToken(account.address, DAITokenAddress, tokenInfo)
    })();
 ```
-`*NOTE:* when you add a new token to the reserve you will have to let the kyber team know so that we list the token pair in the network as well.`
+*NOTE:* `when you add a new token to the reserve you will have to let the kyber team know so that we list the token pair in the network as well.`
 
 
 ## 2. Set rates for multiple tokens.
