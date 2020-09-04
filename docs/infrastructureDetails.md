@@ -10,10 +10,10 @@ The average block time currently is `~13.3 secs`. How many transactions fit into
 
 # Node Provider Recommendations:
 
-* `Why?`
+`Why?`
 Quoting competitive pricing is highly important when all transitions are on-chain, In order to determine if the data from a node is trustworthy, best practice is to specify the recent block number to avoid getting data from an unsynced node. To be extra cautious, you can read from different nodes at the same block number and see if the data is consistent. If they are, it is safe to use the data. 
 
-* `Who?`
+`Who?`
 1. Alchemy 
 - Pro: Stable, Suitable for production, very good customer support
 - Con: Expensive
@@ -24,7 +24,7 @@ Quoting competitive pricing is highly important when all transitions are on-chai
 
 3. Kyber internal node (in beta, will be customized for reading kyber data)
 
-* `When?`
+`When?`
 
 For txs (set rate, deposit and withdraw to your reserve contract), broadcast them to all of the nodes as fast as you can (maybe parallelize them) to reduce the chance the tx is dropped by a certain node
 For reading data from smart contracts, should not rely solely on one node as it can return invalid data resulting wrong price calculation or tx drop
@@ -44,9 +44,9 @@ With those information, in order for you to fix #1 issue, you can use a recommen
 
 # Cancel or Replace a transaction 
 
-* `What & when?` 
+`What & when?` 
 Please note that once a transaction has been mined and is included in a block, it cannot be canceled or replaced. However , during high price volatility, you would want your price updates to reflect at the earliest block, to avoid users taking advantage of the price difference. In order to replace/cancel the transaction ensure that the tx is not yet mined.
 
-* `How?`
+`How?`
 
 What we mean by cancellations is that sending the price update tx with the same nonce but a higher gas price for the miner to drop the one with lower gas price and pick the higher latest one - this is essentially replacing the earlier transaction. Please note that it is not guaranteed your second transaction will actually replace the first transaction.
