@@ -50,3 +50,12 @@ Please note that once a transaction has been mined and is included in a block, i
 `How?`
 
 What we mean by cancellations is that sending the price update tx with the same nonce but a higher gas price for the miner to drop the one with lower gas price and pick the higher latest one - this is essentially replacing the earlier transaction. Please note that it is not guaranteed your second transaction will actually replace the first transaction.
+
+# Recommendations on Wallets and accounts
+
+* For admin accounts that can transfer funds to any address you might want to use a multisig like gnosis multisig or a hardware wallet.
+
+* For operations like setting the price and doing withdrawals to whitelisted addresses and so on, preferably a hot wallets,a keystore with a key stored and decrypted.
+It's not kyber specific rather than ethereum, since hot wallets will perform constant actions best to be run from a server that one person has access to and the decryption key protected. 
+
+# Multiple Node Provider

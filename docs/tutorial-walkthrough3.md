@@ -8,8 +8,8 @@ Outlined here are details on how to add multiple tokens to the reserve, set imba
 To proceed further on this doc, please make sure you have completed walkthrough 1 and 2 and most likely are on staging environment. Steps before getting started on this.
 
 
-Complete basic testing on ropsten testnet. - covered in walkthrough [1](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough1.md) and [2](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/walkthrough2.md)
-On [staging](https://github.com/KyberNetwork/fpr-js-reference/blob/master/docs/mainnetStaging.md) environment 
+Complete basic testing on ropsten testnet. - covered in walkthrough [1](/docs/walkthrough1.md) and [2](/docs/walkthrough2.md)
+On [staging](/docs/mainnetStaging.md) environment 
 * Deploy contracts
 * Set permission group
 * Add token
@@ -105,7 +105,7 @@ The step BPS values should always be non-positive (<=0) in this case, because th
 ## 4. Sanity rates contract
 
 
-The sanity rate contract acts as a safeguard for reserves from bugs in the conversion rate logic or from any hacks into the conversion rate system. If there are large inconsistencies between the sanity rates and the actual rates, then trades involving the reserve will be disabled. 
+The sanity rate contract acts as a safeguard for reserves from bugs in the conversion rate logic or from any hacks into the conversion rate system. If there are large inconsistencies between the sanity rates and the actual rates, then trades involving the reserve will be disabled. For more detailed explanation on [sanity Rates](/docs/sanityRates.md)
 
 When we initially deployed the reserve and conversion rates smart contracts, sanity rates wasn't deployed, as this is an additional and optional feature to safeguard pricing.
 Let’s first deploy a sanity rates contract and link that to the reserve smart contract.
@@ -143,4 +143,4 @@ Likely, if the conversion rate is below `216`, for example, a rate of `210`, you
 
 ```
 
-This is it for setting up and maintaining the FPR on kyber. We will come up with a detailed explanation and suggestions on operational and infrastructure details soon. Stay tuned!!
+This is it for setting up and maintaining the FPR on kyber. For detailed explanation and suggestions on operational and infrastructure details check [this](/docs/infrastructureDetails.md)
