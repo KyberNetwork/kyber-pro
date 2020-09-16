@@ -143,4 +143,4 @@ Likely, if the conversion rate is below `216`, for example, a rate of `210`, you
 
 ```
 
-This is it for setting up and maintaining the FPR on kyber. For detailed explanation and suggestions on operational and infrastructure details check [this](/docs/infrastructureDetails.md)
+This is it for setting up and maintaining the FPR on kyber. For detailed explanation and suggestions on operational and infrastructure details check [this](/documentation/infrastructureDetails.md)
