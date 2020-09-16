@@ -11,7 +11,7 @@ Steps here includes:
   5. [See Your Quote For This Pair On Testnet](#5-see-your-quote-for-this-pair-on-testnet)
   6. [Trade KTT for ETH](#6-trade-ktt-for-eth)
 
-The source code for this walkthrough is at [link](https://github.com/KyberNetwork/fpr-js-reference). 
+The source code for this walkthrough is at [link](https://github.com/KyberNetwork/fpr-js-reference/scripts). 
 
 
 ## Requirements
@@ -162,6 +162,5 @@ To test out a quote/Trade where you buy KTT, you will need to do the following�
 
 ## Next Steps
 
-That’s it for the walkthrough, hope that’s simple enough! In the coming walkthroughs, we will demonstrate advanced features for controling your quotes and optimize your on-chain market making. 
+That’s it for the walkthrough, hope that’s simple enough! In the coming [walkthroughs](docs/tutorial-walkthrough1.md), we will demonstrate advanced features for controling your quotes and optimize your on-chain market making. 
 
-Links will appear here when ready! 

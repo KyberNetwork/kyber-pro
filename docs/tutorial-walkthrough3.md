@@ -8,7 +8,7 @@ Outlined here are details on how to add multiple tokens to the reserve, set imba
 To proceed further on this doc, please make sure you have completed walkthrough 1 and 2 and most likely are on staging environment. Steps before getting started on this.
 
 
-Complete basic testing on ropsten testnet. - covered in walkthrough [1](/docs/walkthrough1.md) and [2](/docs/walkthrough2.md)
+Complete basic testing on ropsten testnet. - covered in walkthrough [1](docs/tutorial-walkthrough1.md) and [2](docs/tutorial-walkthrough2.md)
 On [staging](/docs/mainnetStaging.md) environment 
 * Deploy contracts
 * Set permission group
