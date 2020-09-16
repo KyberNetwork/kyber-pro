@@ -125,10 +125,9 @@ Then, from the Alerter’s account you can call disabletrade().
 
 ## Reserve ID and rebate wallet:
 
-Instead of Ethereum addresses, reserves are now identified using reserve IDs. Each reserve ID is 32 bytes long. Reserve addresses can change in the event of reserve upgrades or reserve migrations. With the new Reserve Routing feature for takers, and as reserves may upgrade their contracts over time (and thus have changing reserve addresses), we utilise reserve IDs for a more stable identity.For more details [link](/docs/reserveIDs.md)
+Instead of Ethereum addresses, reserves are now identified using reserve IDs. Each reserve ID is 32 bytes long. Reserve addresses can change in the event of reserve upgrades or reserve migrations. With the new Reserve Routing feature for takers, and as reserves may upgrade their contracts over time (and thus have changing reserve addresses), we utilise reserve IDs for a more stable identity.
 
-
-As for reserve rebates, the motivation for rebates is to reward FPRs based on their performance (i.e. amount of trade volume they facilitate). This incentivizes reserves to provide better liquidity and tighter spreads, thereby driving greater volume, value, and network fees. The rebate fees will need to be claimed manually through the KyberFeeHandler contract. For more details [link](/docs/reservesRebates.md)
+As for reserve rebates, the motivation for rebates is to reward FPRs based on their performance (i.e. amount of trade volume they facilitate). This incentivizes reserves to provide better liquidity and tighter spreads, thereby driving greater volume, value, and network fees. The rebate fees will need to be claimed manually through the KyberFeeHandler contract. 
 
 
 ## Next steps

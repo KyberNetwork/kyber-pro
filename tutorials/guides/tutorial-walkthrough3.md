@@ -105,7 +105,7 @@ The step BPS values should always be non-positive (<=0) in this case, because th
 ## 4. Sanity rates contract
 
 
-The sanity rate contract acts as a safeguard for reserves from bugs in the conversion rate logic or from any hacks into the conversion rate system. If there are large inconsistencies between the sanity rates and the actual rates, then trades involving the reserve will be disabled. For more detailed explanation on [sanity Rates](/docs/sanityRates.md)
+The sanity rate contract acts as a safeguard for reserves from bugs in the conversion rate logic or from any hacks into the conversion rate system. If there are large inconsistencies between the sanity rates and the actual rates, then trades involving the reserve will be disabled.
 
 When we initially deployed the reserve and conversion rates smart contracts, sanity rates wasn't deployed, as this is an additional and optional feature to safeguard pricing.
 Let’s first deploy a sanity rates contract and link that to the reserve smart contract.
