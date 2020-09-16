@@ -1,9 +1,0 @@
-{
-    "_comment": "used just to init step func's to 0",
-    "buy":[
-        {"x": 0, "y": 0}
-    ],
-    "sell":[
-        {"x": 0, "y": 0}
-    ]
-}
