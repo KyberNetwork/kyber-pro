@@ -162,5 +162,5 @@ To test out a quote/Trade where you buy KTT, you will need to do the following�
 
 ## Next Steps
 
-That’s it for the walkthrough, hope that’s simple enough! In the coming [walkthroughs](/guides/tutorial-walkthrough1.md), we will demonstrate advanced features for controling your quotes and optimize your on-chain market making. 
+That’s it for the walkthrough, hope that’s simple enough! In the coming [walkthroughs](/tutorials/guides/tutorial-walkthrough1.md), we will demonstrate advanced features for controling your quotes and optimize your on-chain market making. 
 

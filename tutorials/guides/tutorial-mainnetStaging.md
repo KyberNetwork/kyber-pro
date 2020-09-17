@@ -9,7 +9,7 @@ Having said that, we haven’t covered the techniques for optimization and effic
 
 ## Rundown on how to set up a reserve : 
 
-We have briefed the process on how to set up and manage a running reserve on ROPSTEN testnet in walkthrough [1](/guides/tutorial-walkthrough1.md) and [2](/guides/tutorial-walkthrough2.md), outlined here is the gist
+We have briefed the process on how to set up and manage a running reserve on ROPSTEN testnet in walkthrough [1](/tutorials/guides/tutorial-walkthrough1.md) and [2](/tutorials/guides/tutorial-walkthrough2.md), outlined here is the gist
 
 * **Step 1 : Deploy contracts** 
 

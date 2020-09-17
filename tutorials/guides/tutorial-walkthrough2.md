@@ -8,7 +8,7 @@ In this walkthrough, we will help you understand how to mirror the orderbook sty
 
 ### Before You Begin
 
-1. Should have completed the [walkthrough 1](/guides/tutorial-walkthrough1.md)
+1. Should have completed the [walkthrough 1](/tutorials/guides/tutorial-walkthrough1.md)
 2. Listed the reserve to the Kyber network
 3. Added the tokens as a trading pair on testnet
 
