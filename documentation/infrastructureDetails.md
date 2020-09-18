@@ -58,4 +58,3 @@ What we mean by cancellations is that sending the price update tx with the same 
 * For operations like setting the price and doing withdrawals to whitelisted addresses and so on, preferably a hot wallets,a keystore with a key stored and decrypted.
 It's not kyber specific rather than ethereum, since hot wallets will perform constant actions best to be run from a server that one person has access to and the decryption key protected. 
 
-# Multiple Node Provider
