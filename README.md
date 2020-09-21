@@ -3,7 +3,7 @@
 Kyber FPRs allows professional MMs to either manually or build bots to operate their own unique algorithms, customize their trading strategy, and adjust their desired risk exposure. 
 [Read More](/documentation/kyberPro-primer.md)
 
-This is a reference implementation for Kyber's FPR javascript [SDK](https://github.com/KyberNetwork/fpr-sdk.js). 
+This is a reference implementation for Kyber's FPR [Javascript SDK](https://github.com/KyberNetwork/fpr-sdk.js). 
 We recommend reviewing the following basic walkthrough to get a good understanding of the key ideas. By default, it connects to Ropsten testnet, but you can easily point it to mainnet when you are ready to deploy. 
 
 - [Walkthrough 1: Deployment, Adding Token Pairs and Setting Rates](tutorials/guides/tutorial-walkthrough1.md)
