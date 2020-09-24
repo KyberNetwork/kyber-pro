@@ -18,5 +18,5 @@ Additional documentation on the reserve system :
 - [Infrastructure Details](/documentation/infrastructureDetails.md)
 - [Trading Strategy](/documentation/tradingStrategy.md)
 
-
+# re-structure
 
